@@ -1,3 +1,8 @@
+<?php 
+  //session_start();
+  include("inc/function.php");
+  $page=$_GET['page'].".php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +109,7 @@
     <section id="tabs" class="tabs">
       <div class="container" data-aos="fade-up">
 
-        <?php include("causes.php")  ?>
+        <?php include($page)  ?>
 
         
 
