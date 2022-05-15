@@ -3,6 +3,7 @@ include("connection.php");
     function getDef()
     {
         $t=null;
+        $j=0;
         $sql="SELECT * FROM def";
         $news_req = mysqli_query(dbconnect(),$sql);
         while($don=mysqli_fetch_assoc($news_req))
@@ -18,6 +19,7 @@ include("connection.php");
     function getHistoire()
     {
         $t=null;
+        $j=0;
         $sql="SELECT * FROM Historiques";
         $news_req = mysqli_query(dbconnect(),$sql);
         while($don=mysqli_fetch_assoc($news_req))
@@ -32,6 +34,7 @@ include("connection.php");
     }
     function getLuttes()
     {
+        $j=0;
         $t=null;
         $sql="SELECT * FROM Luttes";
         $news_req = mysqli_query(dbconnect(),$sql);
@@ -47,6 +50,7 @@ include("connection.php");
     }
     function getCauses()
     {
+        $j=0;
         $t=null;
         $sql="SELECT * FROM Causes";
         $news_req = mysqli_query(dbconnect(),$sql);
@@ -62,6 +66,7 @@ include("connection.php");
     }
     function getConsequences()
     {
+        $j=0;
         $t=null;
         $sql="SELECT * FROM Consequences";
         $news_req = mysqli_query(dbconnect(),$sql);
@@ -77,6 +82,7 @@ include("connection.php");
     }
     function getConsFille($id)
     {
+        $j=0;
         $t=null;
         $sql="SELECT c.titre as cons,f.* FROM ConsequencesFille f join Consequences c on c.id=f.idC where f.idC=".$id;
         $news_req = mysqli_query(dbconnect(),$sql);
