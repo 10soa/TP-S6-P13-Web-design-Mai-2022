@@ -1,5 +1,5 @@
 <?php
-    $cause=getCauses();
+    $cause=getConsFille($_GET['id'],$_GET['titre']);
 ?>
 <div class="section-title">
         <h2>Les causes du rechauffement climatique</h2>
@@ -20,7 +20,9 @@
               
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/img/img1.jpg" alt="" class="img-fluid">
+              <?php for($i=0;$i<count($cause);$i++) { ?>
+                <img src=" <?php echo $cause[$i]['img']; ?>" alt="" class="img-fluid">
+                <?php }?>
               </div>
             </div>
           </div>

@@ -75,16 +75,17 @@ include("connection.php");
             $t[$j]['id']=$don['id'];
             $t[$j]['titre']=$don['titre'];
             $t[$j]['info']=$don['info'];
+            $t[$j]['url']=$don['url'];
             $j++;
         }
         mysqli_free_result($news_req);    
         return $t;
     }
-    function getConsFille($id)
+    function getConsFille($id,$url)
     {
         $j=0;
         $t=null;
-        $sql="SELECT c.titre as cons,f.* FROM ConsequencesFille f join Consequences c on c.id=f.idC where f.idC=".$id;
+        $sql="SELECT c.titre as cons,f.* FROM ConsequencesFille f join Consequences c on c.id=f.idC where f.idC=".$id." and c.url='".$url."'";
         $news_req = mysqli_query(dbconnect(),$sql);
         while($don=mysqli_fetch_assoc($news_req))
         {
@@ -95,7 +96,11 @@ include("connection.php");
             $t[$j]['img']=$don['img'];
             $j++;
         }
-        mysqli_free_result($news_req);    
+        mysqli_free_result($news_req);   
+        if($t==null)
+        {
+            echo "404 not found";
+        } 
         return $t;
     }
 ?>

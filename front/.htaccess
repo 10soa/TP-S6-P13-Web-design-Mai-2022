@@ -1,3 +1,8 @@
 Options +FollowSymlinks
 RewriteEngine on
-RewriteRule ^(/?.*)-([_a-z0-9]*).php$  fiche.php?titre=$1&id=$2
+RewriteRule ^definitions$  template.php?page=def&titre=definitions
+RewriteRule ^consequences$  template.php?page=consequences&titre=consequences
+RewriteRule ^causes$  template.php?page=causes&titre=causes
+RewriteRule ^historiques$  template.php?page=histoires&titre=historiques
+RewriteRule ^solutions$  template.php?page=luttes&titre=solutions
+RewriteRule ^(/?.*)-([_a-z0-9]*)$  template.php?page=fiche&titre=$1&id=$2

@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Presento Bootstrap Template - Index</title>
+  <title><?php echo $_GET['titre']; ?> - Rechauffement Climatique</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,11 +52,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Definition</a></li>
-          <li><a class="nav-link scrollto" href="#about">Historiques</a></li>
-          <li><a class="nav-link scrollto" href="#services">Causes</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Consequences</a></li>
-          <li><a class="nav-link scrollto" href="#team">Solutions</a></li>
+          <li><a class="nav-link scrollto active" href="definitions">Definitions</a></li>
+          <li><a class="nav-link scrollto" href="historiques">Historiques</a></li>
+          <li><a class="nav-link scrollto" href="causes">Causes</a></li>
+          <li><a class="nav-link scrollto " href="consequences">Consequences</a></li>
+          <li><a class="nav-link scrollto" href="solutions">Solutions</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -88,7 +88,11 @@
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><img src="assets/img/img/img2.jpg" class="img-fluid" alt=""></div>
-         
+            <div class="swiper-slide"><img src="assets/img/img/img.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/img/5.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/img/fond.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/img/fond1.jpg" class="img-fluid" alt=""></div>
+
           </div>
           <div class="swiper-pagination"></div>
         </div>

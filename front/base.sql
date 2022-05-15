@@ -34,12 +34,13 @@ insert into Causes values(null,'Les émissions de CO2 d\’origine humaine','La 
 create table Consequences(
      id int primary key NOT NULL AUTO_INCREMENT,
      titre varchar(150),
-     info text
+     info text,
+     url varchar(100)
 );
-insert into consequences values(null,'Conséquences sur les entreprises','Enfin, les entreprises risquent également d\’être affectées par le changement et le réchauffement climatique. En effet, dans un contexte où le climat change, il est plus difficile d\’adapter ses activités.');
-insert into consequences values(null,'Conséquences sur l\’écosystème et la planète','D\’abord, une augmentation des températures à cause du réchauffement climatique affecte l\’ensemble de l\’écosystème mondial et pas seulement la chaleur ressentie. La météo s\’en trouve perturbée, avec une augmentation des phénomènes météorologiques extrêmes, des changements des modèles météorologiques habituels. Cela veut dire plus de tempêtes, plus d\’inondations, plus de cyclones et de sécheresses.');
-insert into consequences values(null,'Les conséquences du réchauffement climatique sur les océans','Le réchauffement climatique a aussi des conséquences dramatiques sur les océans et l\’écosystème marin. L\’augmentation des températures et des concentrations en CO2 perturbent la vie des planctons, entraînent l\’acidification des océans, et diminuent l\’oxygénation des zones marines.');
-insert into consequences values(null,'Conséquences sur la société et l\’économie','Sur la société et l\'économie, le réchauffement climatique peut avoir potentiellement plusieurs conséquences : la capacité des sociétés à s\'adapter à un nouveau climat, à adapter leurs infrastructures, notamment médicales, mais aussi leurs bâtiments. Le réchauffement climatique aura aussi des conséquences sur la santé publique, la capacité alimentaire des pays…');
+insert into consequences values(null,'Conséquences sur les entreprises','Enfin, les entreprises risquent également d\’être affectées par le changement et le réchauffement climatique. En effet, dans un contexte où le climat change, il est plus difficile d\’adapter ses activités.','consequences-entreprises');
+insert into consequences values(null,'Conséquences sur l\’écosystème et la planète','D\’abord, une augmentation des températures à cause du réchauffement climatique affecte l\’ensemble de l\’écosystème mondial et pas seulement la chaleur ressentie. La météo s\’en trouve perturbée, avec une augmentation des phénomènes météorologiques extrêmes, des changements des modèles météorologiques habituels. Cela veut dire plus de tempêtes, plus d\’inondations, plus de cyclones et de sécheresses.','consequences-eco-systeme-planete');
+insert into consequences values(null,'Les conséquences du réchauffement climatique sur les océans','Le réchauffement climatique a aussi des conséquences dramatiques sur les océans et l\’écosystème marin. L\’augmentation des températures et des concentrations en CO2 perturbent la vie des planctons, entraînent l\’acidification des océans, et diminuent l\’oxygénation des zones marines.','consequences-ocean');
+insert into consequences values(null,'Conséquences sur la société et l\’économie','Sur la société et l\'économie, le réchauffement climatique peut avoir potentiellement plusieurs conséquences : la capacité des sociétés à s\'adapter à un nouveau climat, à adapter leurs infrastructures, notamment médicales, mais aussi leurs bâtiments. Le réchauffement climatique aura aussi des conséquences sur la santé publique, la capacité alimentaire des pays…','consequences-societe-economie');
 create table ConsequencesFille(
     id int primary key NOT NULL AUTO_INCREMENT,
     titre varchar(100),
