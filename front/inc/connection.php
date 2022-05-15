@@ -4,8 +4,8 @@ function dbconnect()
     static $connect = null;
     if ($connect === null)
     {
-        $connect = mysqli_connect('sql102.epizy.com', 'epiz_31733066', 'axZERye66dbS', 'epiz_31733066_climat');
-       // $connect = mysqli_connect('localhost', 'root', 'root', 'climat');
+       // $connect = mysqli_connect('sql313.epizy.com', 'epiz_31733338', 'fZuFYYcwNy0n92', 'epiz_31733338_climat');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'climat');
         mysqli_set_charset($connect,"utf8mb4");
 
     }
