@@ -21,12 +21,56 @@ include("connection.php");
         dbconnect()->exec("delete from ConsequencesFille where idC=".$id);
         dbconnect()->exec("delete from Consequences where id=".$id);
     }
+    function deleteCause($id)
+    {
+        dbconnect()->exec("delete from Causes where id=".$id);
+    }
+    function deleteHis($id)
+    {
+        dbconnect()->exec("delete from Historiques where id=".$id);
+    }
+    function deleteDef($id)
+    {
+        dbconnect()->exec("delete from def where id=".$id);
+    }
+    function deleteSol($id)
+    {
+        dbconnect()->exec("delete from Luttes where id=".$id);
+    }
     function insertCons($titre,$info)
     {
         $info=str_replace("'",'"',$info);
         $titre=str_replace("'",'"',$titre);
         $url=str_replace(" ","-",$titre);
-        dbconnect()->exec("insert into Consequences values(default,'".$titre."','".$info."')");
+        dbconnect()->exec("insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')");
+       // echo "insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')";
+    }
+    function insertCause($titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        dbconnect()->exec("insert into Causes values(default,'".$titre."','".$info."')");
+       // echo "insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')";
+    }
+    function insertHis($titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        dbconnect()->exec("insert into Historiques values(default,'".$titre."','".$info."')");
+       // echo "insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')";
+    }
+    function insertSol($titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        dbconnect()->exec("insert into Luttes values(default,'".$titre."','".$info."')");
+       // echo "insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')";
+    }
+    function insertDef($titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        dbconnect()->exec("insert into def values(default,'".$titre."','".$info."')");
        // echo "insert into Consequences values(default,'".$titre."','".$info."',"."'".$url."')";
     }
     function insertConsF($titre,$info,$id)
@@ -42,6 +86,38 @@ include("connection.php");
         $titre=str_replace("'",'"',$titre);
         $url=str_replace(" ","-",$titre);
         dbconnect()->exec("update Consequences set titre='".$titre."',info='".$info."',url='".$url."' where id=".$id);
+         //echo "update Consequences set titre='".$titre."',info='".$info,"',url='".$url."' where id=".$id;
+    }
+    function updateCause($id,$titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        $url=str_replace(" ","-",$titre);
+        dbconnect()->exec("update Causes set titre='".$titre."',info='".$info."' where id=".$id);
+         //echo "update Consequences set titre='".$titre."',info='".$info,"',url='".$url."' where id=".$id;
+    }
+    function updateDef($id,$titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        $url=str_replace(" ","-",$titre);
+        dbconnect()->exec("update def set cat='".$titre."',def='".$info."' where id=".$id);
+         //echo "update Consequences set titre='".$titre."',info='".$info,"',url='".$url."' where id=".$id;
+    }
+    function updateSol($id,$titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        $url=str_replace(" ","-",$titre);
+        dbconnect()->exec("update Luttes set titre='".$titre."',info='".$info."' where id=".$id);
+         //echo "update Consequences set titre='".$titre."',info='".$info,"',url='".$url."' where id=".$id;
+    }
+    function updateHis($id,$titre,$info)
+    {
+        $info=str_replace("'",'"',$info);
+        $titre=str_replace("'",'"',$titre);
+        $url=str_replace(" ","-",$titre);
+        dbconnect()->exec("update Historiques set titre='".$titre."',info='".$info."' where id=".$id);
          //echo "update Consequences set titre='".$titre."',info='".$info,"',url='".$url."' where id=".$id;
     }
     function getDef()

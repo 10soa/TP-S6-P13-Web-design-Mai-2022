@@ -19,11 +19,51 @@ session_start();
        updateCons($_POST['id'],$_POST['titre'],$_POST['info']);
        header('Location:template.php?page=consequence');
     }
+    if(isset($_GET['updateCause']))
+    {
+       updateCause($_POST['id'],$_POST['titre'],$_POST['info']);
+       header('Location:template.php?page=cause');
+    }
+    if(isset($_GET['updateDef']))
+    {
+       updateDef($_POST['id'],$_POST['titre'],$_POST['info']);
+       header('Location:template.php?page=definition');
+    }
+    if(isset($_GET['updateSol']))
+    {
+       updateSol($_POST['id'],$_POST['titre'],$_POST['info']);
+       header('Location:template.php?page=solution');
+    }
+    if(isset($_GET['updateHis']))
+    {
+       updateHis($_POST['id'],$_POST['titre'],$_POST['info']);
+       header('Location:template.php?page=historique');
+    }
     if(isset($_GET['insertCons']))
         {
         insertCons($_POST['titre'],$_POST['info']);
         header('Location:template.php?page=consequence');
         }
+    if(isset($_GET['insertCause']))
+    {
+        insertCause($_POST['titre'],$_POST['info']);
+        header('Location:template.php?page=cause');
+    }
+    if(isset($_GET['insertDef']))
+    {
+        insertDef($_POST['titre'],$_POST['info']);
+        header('Location:template.php?page=definition');
+    }
+    if(isset($_GET['insertSol']))
+    {
+        insertSol($_POST['titre'],$_POST['info']);
+        header('Location:template.php?page=solution');
+    }
+    if(isset($_GET['insertDHis']))
+    {
+        insertSol($_POST['titre'],$_POST['info']);
+        header('Location:template.php?page=historique');
+    }
     if(isset($_GET['insertConsF']))
     {
     insertConsF($_POST['titre'],$_POST['info'],$_GET['id']);
@@ -33,6 +73,26 @@ session_start();
     {
         deleteCons($_GET['id']);
         header('Location:template.php?page=consequence');
+    }
+    if(isset($_GET['deleteCause']))
+    {
+        deleteCause($_GET['id']);
+        header('Location:template.php?page=cause');
+    }
+    if(isset($_GET['deleteSol']))
+    {
+        deleteSol($_GET['id']);
+        header('Location:template.php?page=solution');
+    }
+    if(isset($_GET['deleteHis']))
+    {
+        deleteHis($_GET['id']);
+        header('Location:template.php?page=historique');
+    }
+    if(isset($_GET['deleteDef']))
+    {
+        deleteDef($_GET['id']);
+        header('Location:template.php?page=definition');
     }
     
 ?>
