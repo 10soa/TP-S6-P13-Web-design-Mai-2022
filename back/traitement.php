@@ -1,0 +1,38 @@
+<?php
+session_start();
+    include("inc/function.php");
+    if(isset($_GET['mdp']))
+    {
+        $test=getAdmin($_GET['nom'],$_GET['mdp']);
+        if($test==null)
+        {
+            header('Location:index.php?error=1');
+        }
+        else
+        {
+            $_SESSION['nom']=$test[0]['login'];
+            header('Location:template.php?page=consequence');
+        }
+    }
+    if(isset($_GET['updateCons']))
+    {
+       updateCons($_POST['id'],$_POST['titre'],$_POST['info']);
+       header('Location:template.php?page=consequence');
+    }
+    if(isset($_GET['insertCons']))
+        {
+        insertCons($_POST['titre'],$_POST['info']);
+        header('Location:template.php?page=consequence');
+        }
+    if(isset($_GET['insertConsF']))
+    {
+    insertConsF($_POST['titre'],$_POST['info'],$_GET['id']);
+    header('Location:template.php?page=consequence');
+    }
+    if(isset($_GET['deleteCons']))
+    {
+        deleteCons($_GET['id']);
+        header('Location:template.php?page=consequence');
+    }
+    
+?>
