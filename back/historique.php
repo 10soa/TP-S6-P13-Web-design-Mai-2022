@@ -14,7 +14,7 @@
                     <h2>Liste</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li>
-                        <a href="template.php?page=insertCause" > <button class="btn btn-danger btn-sm"> Ajouter </button></a>
+                        <a href="template1.php?page=insertCause" > <button class="btn btn-danger btn-sm"> Ajouter </button></a>
                         </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -43,7 +43,7 @@
                                 
                             <td class=""><?php echo $achat[$i]['titre'] ?></td>
                             <td class=""><?php echo $achat[$i]['info'] ?> </td>
-                         <td class=""><a href="template.php?page=updateHis&id=<?php echo $achat[$i]['id'] ?>&titre=<?php echo $achat[$i]['titre'] ?>" > <button class="btn btn-danger btn-sm"> Modifier </button></a></td>
+                         <td class=""><a href="template1.php?page=updateHis&id=<?php echo $achat[$i]['id'] ?>&titre=<?php echo $achat[$i]['titre'] ?>" > <button class="btn btn-danger btn-sm"> Modifier </button></a></td>
                             <td class=""><a href="traitement.php?deleteHis&id=<?php echo $achat[$i]['id'] ?>  " > <button class="btn btn-danger btn-sm">Supprimer </button></a> </td>
                              </tr>
                             <?php } ?>

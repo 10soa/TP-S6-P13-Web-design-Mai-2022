@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login </title>
-  <link rel="stylesheet" href="assets/css/style-login.css">
+  <link rel="stylesheet" href="assets1/css/style-login.css">
 
 </head>
 <body>
@@ -25,7 +25,7 @@
 	
 </div>
 <!-- partial -->
-  <script  src="assets/js/script-login.js"></script>
+  <script  src="assets1/js/script-login.js"></script>
 
 </body>
 </html>

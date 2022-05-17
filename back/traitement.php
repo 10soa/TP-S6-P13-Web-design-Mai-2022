@@ -1,98 +1,102 @@
 <?php
-session_start();
-    include("inc/function.php");
+    include("inc1/function.php");
+   // echo "soa2";
+  //  header('Location:template1.php?page=consequence');
     if(isset($_GET['mdp']))
     {
+      //  echo "soa1";
         $test=getAdmin($_GET['nom'],$_GET['mdp']);
+        echo "nick adala";
         if($test==null)
         {
             header('Location:index.php?error=1');
         }
         else
         {
-            $_SESSION['nom']=$test[0]['login'];
-            header('Location:template.php?page=consequence');
+           // $_SESSION['nom']=$test[0]['login'];
+          // echo "soa";
+            header('Location:template1.php?page=consequence');
         }
     }
     if(isset($_GET['updateCons']))
     {
        updateCons($_POST['id'],$_POST['titre'],$_POST['info']);
-       header('Location:template.php?page=consequence');
+       header('Location:template1.php?page=consequence');
     }
     if(isset($_GET['updateCause']))
     {
        updateCause($_POST['id'],$_POST['titre'],$_POST['info']);
-       header('Location:template.php?page=cause');
+       header('Location:template1.php?page=cause');
     }
     if(isset($_GET['updateDef']))
     {
        updateDef($_POST['id'],$_POST['titre'],$_POST['info']);
-       header('Location:template.php?page=definition');
+       header('Location:template1.php?page=definition');
     }
     if(isset($_GET['updateSol']))
     {
        updateSol($_POST['id'],$_POST['titre'],$_POST['info']);
-       header('Location:template.php?page=solution');
+       header('Location:template1.php?page=solution');
     }
     if(isset($_GET['updateHis']))
     {
        updateHis($_POST['id'],$_POST['titre'],$_POST['info']);
-       header('Location:template.php?page=historique');
+       header('Location:template1.php?page=historique');
     }
     if(isset($_GET['insertCons']))
         {
         insertCons($_POST['titre'],$_POST['info']);
-        header('Location:template.php?page=consequence');
+        header('Location:template1.php?page=consequence');
         }
     if(isset($_GET['insertCause']))
     {
         insertCause($_POST['titre'],$_POST['info']);
-        header('Location:template.php?page=cause');
+        header('Location:template1.php?page=cause');
     }
     if(isset($_GET['insertDef']))
     {
         insertDef($_POST['titre'],$_POST['info']);
-        header('Location:template.php?page=definition');
+        header('Location:template1.php?page=definition');
     }
     if(isset($_GET['insertSol']))
     {
         insertSol($_POST['titre'],$_POST['info']);
-        header('Location:template.php?page=solution');
+        header('Location:template1.php?page=solution');
     }
     if(isset($_GET['insertDHis']))
     {
         insertSol($_POST['titre'],$_POST['info']);
-        header('Location:template.php?page=historique');
+        header('Location:template1.php?page=historique');
     }
     if(isset($_GET['insertConsF']))
     {
     insertConsF($_POST['titre'],$_POST['info'],$_GET['id']);
-    header('Location:template.php?page=consequence');
+    header('Location:template1.php?page=consequence');
     }
     if(isset($_GET['deleteCons']))
     {
         deleteCons($_GET['id']);
-        header('Location:template.php?page=consequence');
+        header('Location:template1.php?page=consequence');
     }
     if(isset($_GET['deleteCause']))
     {
         deleteCause($_GET['id']);
-        header('Location:template.php?page=cause');
+        header('Location:template1.php?page=cause');
     }
     if(isset($_GET['deleteSol']))
     {
         deleteSol($_GET['id']);
-        header('Location:template.php?page=solution');
+        header('Location:template1.php?page=solution');
     }
     if(isset($_GET['deleteHis']))
     {
         deleteHis($_GET['id']);
-        header('Location:template.php?page=historique');
+        header('Location:template1.php?page=historique');
     }
     if(isset($_GET['deleteDef']))
     {
         deleteDef($_GET['id']);
-        header('Location:template.php?page=definition');
+        header('Location:template1.php?page=definition');
     }
     
 ?>

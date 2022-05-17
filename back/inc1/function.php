@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("connection1.php");
     function getAdmin($log,$mdp)
     {
         $t=null;
