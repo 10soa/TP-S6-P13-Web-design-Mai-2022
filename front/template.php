@@ -82,32 +82,7 @@
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/img/img2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/img/img.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/img/5.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/img/fond.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/img/fond1.jpg" class="img-fluid" alt=""></div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-
-       
-
-      </div>
-    </section>
+   
 
     <!-- ======= Tabs Section ======= -->
     <section id="tabs" class="tabs">

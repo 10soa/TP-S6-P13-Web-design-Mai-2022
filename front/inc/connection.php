@@ -10,12 +10,12 @@ function dbconnect()
 
     }
     return $connect;*/
-    $user='postgres';
-    $pass='kalisi61';
-       // $user='yayhqisfnzoxqi';
-     //   $pass='399361126a6f51ca153633b0a4633b098205f72f3ebd4e83c1bb0b37816000dd';
-        $dsn='pgsql:host=localhost;port=5432;dbname=climat1';
-       //$dsn='pgsql:host=ec2-54-228-32-29.eu-west-1.compute.amazonaws.com;port=5432;dbname=dbj5286g25hi9d';
+  //  $user='postgres';
+  //  $pass='kalisi61';
+        $user='yayhqisfnzoxqi';
+        $pass='399361126a6f51ca153633b0a4633b098205f72f3ebd4e83c1bb0b37816000dd';
+        //$dsn='pgsql:host=localhost;port=5432;dbname=climat1';
+       $dsn='pgsql:host=ec2-54-228-32-29.eu-west-1.compute.amazonaws.com;port=5432;dbname=dbj5286g25hi9d';
        try {
         	$dbh = new PDO($dsn, $user, $pass);
             $dbh->exec("SET client_encoding='UTF8'");
